@@ -31,15 +31,15 @@ function ToDoList() {
   };
 
   const completeTodo = id => {
-    let updatedTodos = todos.map(todo => {
+    const updatedTodos = todos.map(todo => {
       if (todo.id === id) {
-        todo.isComplete = !todo.isComplete;
+        return { ...todo, isComplete: !todo.isComplete };
       }
       return todo;
     });
     setTodos(updatedTodos);
   };
-
+  
   return (
     <>
       <h1>React - To Do List</h1>

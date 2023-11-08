@@ -14,13 +14,13 @@ function MyDate() {
   return (
     <div className="date">
       <div className="dateRight">
-        <div id="dateNumber">{date.toLocaleString('id-ID', { day: 'numeric' })}</div>
+        <div className="dateNumber">{date.toLocaleString('id-ID', { day: 'numeric' })}</div>
         <div>
-          <div id="dateMonth">{date.toLocaleString('id-ID', { month: 'long' })}</div>
-          <div id="dateYear">{date.toLocaleString('id-ID', { year: 'numeric' })}</div>
+          <div className="dateMonth">{date.toLocaleString('id-ID', { month: 'long' })}</div>
+          <div className="dateYear">{date.toLocaleString('id-ID', { year: 'numeric' })}</div>
         </div>
       </div>
-      <div id="dateText">{date.toLocaleString('id-ID', { weekday: 'long' })}</div>
+      <div className="dateText">{date.toLocaleString('id-ID', { weekday: 'long' })}</div>
     </div>
   );
 }

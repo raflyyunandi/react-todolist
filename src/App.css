@@ -13,10 +13,15 @@ body {
   font-family: Arial, sans-serif; 
 }
 
+h1 {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 24px;
+}
+
 .todo-app {
   display: flex;
   flex-direction: column;
-  justify-content: start;
   max-width: 100%;
   width: 520px;
   background: #161a2b;
@@ -25,7 +30,6 @@ body {
   border-radius: 10px;
   padding-bottom: 32px;
 }
-
 
 /* Date */
 .date {
@@ -41,37 +45,27 @@ body {
   align-items: center;
 }
 
-#dateNumber {
+.dateNumber {
   font-size: 50px;
 }
 
-#dateText {
+.dateText {
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
-#dateMonth,
-#dateNumber,
-#dateText  {
+.dateMonth,
+.dateNumber,
+.dateText  {
   font-weight: bold;
 }
 
-#dateMonth,
-#dateYear {
+.dateMonth,
+.dateYear {
   margin-left: 7px;
   font-size: 20px;
 }
-
-h1 {
-  margin: 32px 0;
-  color: #fff;
-  font-size: 24px;
-}
-
-.complete {
-  text-decoration: line-through;
-  opacity: 0.4;
-}
+/* Date */
 
 .todo-form {
   margin-bottom: 32px;
@@ -116,7 +110,12 @@ h1 {
     rgba(20, 159, 255, 1) 0%,
     rgba(17, 122, 255, 1) 100%
   );
-  padding: 16px 22px;
+  padding: 10px 22px;
+}
+
+.todo-complete {
+  text-decoration: line-through;
+  opacity: 0.4;
 }
 
 .todo-container {
@@ -125,13 +124,25 @@ h1 {
   position: relative;
 }
 
+.todo-text {
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+  max-width: 80%;
+  white-space: pre-wrap; /* Untuk membuat baris baru jika diperlukan */
+  word-wrap: break-word; /* Untuk memecah kata jika teks terlalu panjang */
+  text-align: left;
+
+}
+
 .todo-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 4px auto;
   color: #fff;
-  padding: 16px;
+  padding: 10px;
   border-radius: 5px;
   width: 90%;
 }
@@ -183,7 +194,6 @@ h1 {
 .edit-icon {
   color: #fff;
 }
-
 
 @media (max-width: 768px) {
   .todo-app {

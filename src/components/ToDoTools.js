@@ -23,12 +23,12 @@ const ToDoTools = ({ todos, completeTodo, removeTodo, updateTodo }) => {
 
   return todos.map((todo, index) => (
     <div
-      className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
+      className={todo.isComplete ? 'todo-row todo-complete' : 'todo-row'}
       key={index}
     >
-      <div key={todo.id} onClick={() => completeTodo(todo.id)}>
+      <p key={todo.id} onClick={() => completeTodo(todo.id)} className="todo-text">
         {todo.text}
-      </div>
+      </p>
       <div className='icons'>
         <RiCloseCircleLine
           onClick={() => removeTodo(todo.id)}
